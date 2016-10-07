@@ -5,8 +5,7 @@ def findSpan(spans, new_span):
     a, b = new_span
     for span in spans:
         if a >= span[0] and b <= span[1]:
-            span[0] = a
-            span[1] = b
+            a, b = span
             return True
         elif a < span[0] and b > span[1]:
             return True
